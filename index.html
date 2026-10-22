@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Akshita's Level 17 🎂</title>
+<!-- Fonts load from Google Fonts. If offline, the fallback fonts are used and everything still works. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-bg="login">
+<!-- ============================================================
+  WHAT YOU CAN EDIT IN THIS FILE (safe): the text inside the lines marked EDITABLE.
+  Quest texts, answers, letters and the 17 notes live in script.js (top of the file), NOT here.
+  Everything else: leave unchanged unless you know HTML.
+============================================================= -->
+<div id="deco" aria-hidden="true"></div>
+<div id="fx" aria-hidden="true"></div>
+
+<!-- Sound toggle (sound is OFF until pressed) -->
+<button id="soundBtn" class="fab" aria-label="Toggle sound" title="Sound on/off">🔇</button>
+
+<!-- ================= SCREEN 1: LOGIN ================= -->
+<main id="login" class="screen">
+  <div class="card login-card" id="loginCard">
+    <div class="peek left" data-char="cat" aria-hidden="true"></div>
+    <div class="peek right" data-char="kid" aria-hidden="true"></div>
+    <div class="cake-mini" aria-hidden="true">🎂</div>
+    <!-- EDITABLE: Main birthday title -->
+    <h1>WELCOME TO AKSHITA'S SECRET WORLD!</h1>
+    <!-- EDITABLE: Subtitle -->
+    <p class="sub">A very classified mission for the birthday girl. 🎀</p>
+    <!-- EDITABLE: Small message -->
+    <p class="small">Your childhood called. It has a birthday surprise for you.</p>
+    <form id="loginForm" autocomplete="off">
+      <!-- EDITABLE: labels and placeholders -->
+      <label for="user">USERNAME 🗝️</label>
+      <input id="user" type="text" placeholder="Enter your secret identity..." autocapitalize="off" spellcheck="false">
+      <label for="pass">PASSWORD</label>
+      <div class="passrow">
+        <input id="pass" type="password" placeholder="Enter the secret code..." autocapitalize="off" spellcheck="false">
+        <button type="button" id="showPass" class="mini" aria-label="Show or hide password">👁️</button>
+      </div>
+      <!-- EDITABLE: Login hint (kept exactly as requested, typo included) -->
+      <p class="hint">Username: Your name in capitals
+Password: You name in small letter</p>
+      <p id="loginMsg" class="msg" role="alert"></p>
+      <!-- EDITABLE: Login button label -->
+      <button type="submit" class="btn portal">UNLOCK MY WORLD! 🔓</button>
+    </form>
+  </div>
+</main>
+
+<!-- ================= SCREENS 2-6: QUESTS (one template, filled by script.js) ================= -->
+<main id="quest" class="screen" hidden>
+  <header class="topbar">
+    <div class="qlabel" id="qLabel">QUEST 1/5</div>
+    <div class="stars" id="stars" aria-label="Quest progress"></div>
+    <button id="restartBtn" class="mini" title="Restart game" aria-label="Restart game">🔄</button>
+  </header>
+  <h2 id="qTitle"></h2>
+  <div class="guiderow">
+    <div id="guide" class="guide" aria-hidden="true"></div>
+    <div class="bubble" id="qIntro"></div>
+  </div>
+  <p id="qQuestion" class="question"></p>
+  <div id="stage" class="stage"></div>
+  <p id="fb" class="fb" role="status"></p>
+  <nav class="nav" id="nav"></nav>
+</main>
+
+<!-- ================= FINAL SURPRISE ROOM ================= -->
+<main id="notes" class="screen" hidden>
+  <header class="topbar">
+    <button id="backParty" class="mini wide">⬅ PARTY</button>
+    <div class="qlabel" id="noteCount">0/17 SURPRISES DISCOVERED</div>
+    <button id="restartBtn2" class="mini" title="Restart game" aria-label="Restart game">🔄</button>
+  </header>
+  <!-- EDITABLE: Final room heading and subtitle -->
+  <h2>SEVENTEEN LITTLE NOTES FOR SEVENTEEN BEAUTIFUL YEARS 💗</h2>
+  <p class="sub">One birthday girl. Seventeen tiny surprises. Unlimited amounts of bestie nonsense.</p>
+  <div class="grid" id="noteGrid"></div>
+  <!-- Appears after all 17 notes are opened (text is edited in script.js: ALL_DONE_MSG) -->
+  <div class="finalmsg" id="allDone" hidden>
+    <h3 id="allMsg"></h3>
+    <button class="btn alt" id="replayBtn">🔁 REPLAY THE ADVENTURE</button>
+  </div>
+</main>
+
+<!-- ================= LETTER POPUP (reused for all 5 letters) ================= -->
+<div id="letterModal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="lHead">
+  <div class="letter" id="letterBox">
+    <button class="x" id="letterClose" aria-label="Close letter">✖</button>
+    <div class="envelope" aria-hidden="true">💌</div>
+    <h3 id="lHead"></h3>
+    <div class="ltext" id="lText" tabindex="0"></div>
+    <!-- EDITABLE: Letter confirm button label (also set in script.js CONTENT.buttons) -->
+    <button class="btn" id="readBtn">I READ MY LETTER! 💌</button>
+  </div>
+</div>
+
+<!-- ================= NOTE POPUP ================= -->
+<div id="noteModal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="nHead">
+  <div class="notebox" id="noteBox">
+    <button class="x" id="noteClose" aria-label="Close note">✖</button>
+    <div class="floaters" id="floaters" aria-hidden="true"></div>
+    <div class="envelope big" id="nEnv" aria-hidden="true">💌</div>
+    <h3 id="nHead"></h3>
+    <div class="ltext" id="nText" tabindex="0"></div>
+    <button class="btn" id="noteOk">CLOSE 💗</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
