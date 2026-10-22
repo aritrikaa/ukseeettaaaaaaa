@@ -108,7 +108,6 @@ const CONTENT = {
         text: "oh yo hell naw, u did 'em all so Kwik, gng. dayumn bro. but then meri bestie hai to chant chalak to hogi hiiii heheheheheheh" }
     }
   ]
-  ]
 };
 
 /* EDITABLE: THE SEVENTEEN FINAL NOTES. Replace each message between the quotes.
@@ -145,8 +144,7 @@ const NOTES = [
   // NOTE 15 — idea: promise of friendship
   { id: 15, title: "NOTE 15", message: "happy bday yawr", theme: "pink" },
   // NOTE 16 — idea: the biggest, most emotional final wish (gets the special big-envelope treatment)
-  { id: 16, title: "NOTE 16", message: "I love you so much ion have anything more to say. KAL LETTER DUNGI VO PADHNA, EMO EMO SA SUNDAR SUNDAR SA", theme: "mint" }
-];
+  { id: 16, title: "NOTE 16", message: "I love you so much ion have anything more to say. KAL LETTER DUNGI VO PADHNA, EMO EMO SA SUNDAR SUNDAR SA", theme: "mint" },
   // NOTE 17 — idea: the biggest, most emotional final wish (gets the special big-envelope treatment)
   { id: 17, title: "NOTE 17", message: "(kalka letter padhlena) I LOVE U AND ONCE AGAIN HAPPIEST BDAY WISHES TO MY SWEETEST SEVENTEEN", theme: "red" }
 ];
